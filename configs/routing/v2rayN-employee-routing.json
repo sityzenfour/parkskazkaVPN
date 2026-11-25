@@ -1,0 +1,36 @@
+[
+  {
+    "remarks": "ParkSkazka domains direct",
+    "enabled": true,
+    "outboundTag": "direct",
+    "domain": [
+      "domain:parkskazka.com"
+    ]
+  },
+  {
+    "remarks": "Russian domains direct",
+    "enabled": true,
+    "outboundTag": "direct",
+    "domain": [
+      "domain:ru",
+      "domain:su",
+      "domain:xn--p1ai",
+      "geosite:category-ru"
+    ]
+  },
+  {
+    "remarks": "Private and Russian IPs direct",
+    "enabled": true,
+    "outboundTag": "direct",
+    "ip": [
+      "geoip:private",
+      "geoip:ru"
+    ]
+  },
+  {
+    "remarks": "Other traffic through the employee VPN",
+    "enabled": true,
+    "outboundTag": "proxy",
+    "port": "0-65535"
+  }
+]

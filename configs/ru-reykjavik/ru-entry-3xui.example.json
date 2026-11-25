@@ -1,0 +1,107 @@
+{
+  "up": 0,
+  "down": 0,
+  "total": 0,
+  "remark": "RU-entry",
+  "enable": true,
+  "expiryTime": 0,
+  "listen": "",
+  "port": 41686,
+  "protocol": "vless",
+  "settings": {
+    "clients": [
+      {
+        "auth": "REPLACE_AUTH",
+        "comment": "",
+        "created_at": 1794398088385,
+        "email": "example-client-2",
+        "enable": true,
+        "expiryTime": 0,
+        "id": "00000000-0000-4000-8000-000000000003",
+        "limitIp": 0,
+        "password": "REPLACE_PASSWORD",
+        "reset": 0,
+        "resetDay": 0,
+        "resetMax": 0,
+        "resetWeekday": 0,
+        "security": "auto",
+        "subId": "example-client-8",
+        "tgId": 0,
+        "totalGB": 0,
+        "trafficReset": "never",
+        "trafficResetDay": 1,
+        "updated_at": 1794398088000
+      }
+    ],
+    "decryption": "none",
+    "encryption": "none"
+  },
+  "streamSettings": {
+    "network": "xhttp",
+    "xhttpSettings": {
+      "path": "/api/v1/stream",
+      "host": "",
+      "mode": "stream-one",
+      "xPaddingBytes": "100-1000",
+      "xPaddingObfsMode": true,
+      "xPaddingKey": "x_pad",
+      "xPaddingPlacement": "cookie",
+      "sessionIDPlacement": "cookie",
+      "seqPlacement": "cookie",
+      "seqKey": "x_seq",
+      "uplinkHTTPMethod": "PATCH",
+      "xmux": {
+        "maxConcurrency": "",
+        "maxConnections": "2",
+        "cMaxReuseTimes": 0,
+        "hMaxRequestTimes": "600-900",
+        "hMaxReusableSecs": "1800-3000",
+        "hKeepAlivePeriod": 0
+      }
+    },
+    "security": "reality",
+    "realitySettings": {
+      "show": false,
+      "xver": 0,
+      "target": "vpn-entry.example.invalid:443",
+      "serverNames": [
+        "vpn-entry.example.invalid",
+        "vpn-entry.example.invalid"
+      ],
+      "privateKey": "REPLACE_PRIVATEKEY",
+      "minClientVer": "",
+      "maxClientVer": "",
+      "maxTimediff": 0,
+      "shortIds": [
+        "00f4",
+        "000000f5",
+        "00000000000000f6",
+        "000000000000f7",
+        "f8",
+        "00000000f9",
+        "0000fa",
+        "0000000000fb"
+      ],
+      "mldsa65Seed": "",
+      "settings": {
+        "publicKey": "REPLACE_PUBLICKEY",
+        "fingerprint": "firefox",
+        "serverName": "",
+        "spiderX": "/3RdGsnnDdG2NpxT",
+        "mldsa65Verify": ""
+      }
+    }
+  },
+  "tag": "in-41686-tcp",
+  "sniffing": {
+    "enabled": true,
+    "destOverride": [
+      "http",
+      "tls",
+      "quic",
+      "fakedns"
+    ]
+  },
+  "shareAddrStrategy": "listen",
+  "shareAddr": ""
+}

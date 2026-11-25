@@ -1,0 +1,45 @@
+{
+  "tag": "in-443-tcp",
+  "listen": "0.0.0.0",
+  "port": 443,
+  "protocol": "vless",
+  "settings": {
+    "clients": [
+      {
+        "id": "00000000-0000-4000-8000-000000000001",
+        "email": "example-employee"
+      }
+    ],
+    "decryption": "none"
+  },
+  "streamSettings": {
+    "network": "xhttp",
+    "security": "reality",
+    "realitySettings": {
+      "target": "telia.lt:443",
+      "serverNames": ["telia.lt"],
+      "privateKey": "REPLACE_PRIVATEKEY",
+      "shortIds": ["0000000000000001"],
+      "xver": 0,
+      "show": false,
+      "minClientVer": "",
+      "maxClientVer": ""
+    },
+    "xhttpSettings": {
+      "host": "lanet.ua",
+      "path": "/api/v1/updates",
+      "mode": "stream-one",
+      "uplinkHTTPMethod": "PUT",
+      "xPaddingBytes": "1000-4000",
+      "xPaddingObfsMode": true,
+      "xPaddingPlacement": "cookie",
+      "xPaddingHeader": "X-Session-ID",
+      "xPaddingKey": "session",
+      "xPaddingMethod": "tokenish"
+    }
+  },
+  "sniffing": {
+    "enabled": true,
+    "destOverride": ["http", "tls", "quic"]
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "log": {
+    "loglevel": "warning"
+  },
+  "inbounds": [
+    {
+      "tag": "local-test",
+      "listen": "127.0.0.1",
+      "port": 10987,
+      "protocol": "socks",
+      "settings": {
+        "udp": false
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "tag": "ru-private",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "192.0.2.10",
+            "port": 41686,
+            "users": [
+              {
+                "id": "00000000-0000-4000-8000-000000000003",
+                "encryption": "none"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "xhttp",
+        "security": "reality",
+        "xhttpSettings": {
+          "path": "/api/v1/stream",
+          "mode": "stream-one",
+          "sessionIDPlacement": "cookie",
+          "seqPlacement": "cookie",
+          "seqKey": "x_seq",
+          "uplinkHTTPMethod": "PATCH",
+          "xPaddingBytes": "100-1000",
+          "xPaddingObfsMode": true,
+          "xPaddingKey": "x_pad"
+        },
+        "realitySettings": {
+          "serverName": "vpn-entry.example.invalid",
+          "fingerprint": "firefox",
+          "publicKey": "REPLACE_PUBLICKEY",
+          "shortId": "000000f5",
+          "spiderX": "/3RdGsnnDdG2NpxT"
+        }
+      }
+    }
+  ]
+}

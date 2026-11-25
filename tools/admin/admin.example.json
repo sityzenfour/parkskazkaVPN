@@ -1,0 +1,7 @@
+{
+  "ServerAddress": "192.0.2.10",
+  "PanelPort": 47548,
+  "LocalPort": 47549,
+  "PanelUrl": "https://192.0.2.10:47548/REPLACE_PANEL_PATH/panel/clients",
+  "ServerFingerprint": "SHA256:REPLACE_VERIFIED_ED25519_FINGERPRINT"
+}

@@ -1,0 +1,61 @@
+[
+  {
+    "remarks": "ParkSkazka domains direct",
+    "enabled": true,
+    "ruleType": 1,
+    "outboundTag": "direct",
+    "domain": [
+      "domain:parkskazka.com"
+    ]
+  },
+  {
+    "remarks": "Corporate and private networks direct",
+    "enabled": true,
+    "ruleType": 1,
+    "outboundTag": "direct",
+    "ip": [
+      "geoip:private",
+      "6.6.0.0/16",
+      "2.1.1.0/29",
+      "20.1.0.0/16",
+      "20.8.0.0/16",
+      "20.11.0.0/16"
+    ]
+  },
+  {
+    "remarks": "BitTorrent blocked",
+    "enabled": true,
+    "ruleType": 1,
+    "outboundTag": "block",
+    "protocol": [
+      "bittorrent"
+    ]
+  },
+  {
+    "remarks": "Russian domains direct",
+    "enabled": true,
+    "ruleType": 1,
+    "outboundTag": "direct",
+    "domain": [
+      "geosite:category-ru",
+      "domain:ru",
+      "domain:xn--p1ai"
+    ]
+  },
+  {
+    "remarks": "Russian IPs direct",
+    "enabled": true,
+    "ruleType": 1,
+    "outboundTag": "direct",
+    "ip": [
+      "geoip:ru"
+    ]
+  },
+  {
+    "remarks": "Other traffic through selected RU profile",
+    "enabled": true,
+    "ruleType": 1,
+    "outboundTag": "proxy",
+    "port": "1-65535"
+  }
+]
